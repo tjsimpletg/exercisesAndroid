@@ -16,6 +16,8 @@ MainActivity extends AppCompatActivity {
     private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnRadioButton;
+    private Button mBtnCheckBox;
+    private Button mBtnImageViw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +64,24 @@ MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RadioButtonActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        mBtnCheckBox = findViewById(R.id.btn_checkbox);
+        mBtnCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CheckBoxActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        mBtnImageViw = findViewById(R.id.btn_imageview);
+        mBtnImageViw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ImageViewActivity.class );
                 startActivity(intent);
             }
         });
